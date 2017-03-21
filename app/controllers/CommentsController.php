@@ -20,8 +20,10 @@ class CommentsController{
 		$comments = new CommentsModel();
 		$data = $comments->getCommentsByNewsId($newsId, '_tree');
 		foreach ($data as $v) {
-			echo str_repeat('- ', $v['level']).$v['commusername'].'说'.$v['conncontent'].'</br>';
+			$result[] = $v;
 		}
+		$res["records"] = $result;
+		return json_encode($res);
 	}
 }
 

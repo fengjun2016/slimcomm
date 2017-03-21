@@ -447,3 +447,40 @@ Trace: #0 /home/fengjun/php_workspace/comment/app/controllers/CommentsController
 2017/03/20 23:55:42 [error] 6019#0: *67 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined variable: news_id in /home/fengjun/php_workspace/comment/app/models/CommentsModel.php on line 21" while reading response header from upstream, client: 127.0.0.1, server: wwwfj.liejin99.com, request: "GET /comments/1 HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8080"
 2017/03/20 23:56:05 [error] 6019#0: *67 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined index: content in /home/fengjun/php_workspace/comment/vendor/vrana/notorm/NotORM/Row.php on line 166
 PHP message: PHP Notice:  Undefined index: content in /home/fengjun/php_workspace/comment/vendor/vrana/notorm/NotORM/Row.php on line 166" while reading response header from upstream, client: 127.0.0.1, server: wwwfj.liejin99.com, request: "GET /comments/1 HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8080"
+2017/03/21 03:12:45 [error] 3337#0: *1 FastCGI sent in stderr: "PHP message: Slim Application Error:
+Type: PDOException
+Code: 2002
+Message: SQLSTATE[HY000] [2002] Connection refused
+File: /home/fengjun/php_workspace/comment/lib/model/mysqlPdo.php
+Line: 12
+Trace: #0 /home/fengjun/php_workspace/comment/lib/model/mysqlPdo.php(12): PDO->__construct('mysql:dbname=si...', 'root', '123')
+#1 /home/fengjun/php_workspace/comment/lib/model/model.php(8): mysqlPdo::getInstance()
+#2 /home/fengjun/php_workspace/comment/app/controllers/CommentsController.php(20): model->__construct()
+#3 [internal function]: CommentsController->getAllComments(Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#4 /home/fengjun/php_workspace/comment/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(41): call_user_func(Array, Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#5 /home/fengjun/php_workspace/comment/vendor/slim/slim/Slim/Route.php(344): Slim\Handlers\Strategies\RequestResponse->__invoke(Array, Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#" while reading response header from upstream, client: 127.0.0.1, server: wwwfj.liejin99.com, request: "GET /comments/1 HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8080"
+2017/03/21 03:13:38 [error] 3337#0: *1 FastCGI sent in stderr: "PHP message: Slim Application Error:
+Type: PDOException
+Code: 2002
+Message: SQLSTATE[HY000] [2002] No such file or directory
+File: /home/fengjun/php_workspace/comment/lib/model/mysqlPdo.php
+Line: 12
+Trace: #0 /home/fengjun/php_workspace/comment/lib/model/mysqlPdo.php(12): PDO->__construct('mysql:dbname=si...', 'root', '123')
+#1 /home/fengjun/php_workspace/comment/lib/model/model.php(8): mysqlPdo::getInstance()
+#2 /home/fengjun/php_workspace/comment/app/controllers/CommentsController.php(20): model->__construct()
+#3 [internal function]: CommentsController->getAllComments(Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#4 /home/fengjun/php_workspace/comment/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(41): call_user_func(Array, Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#5 /home/fengjun/php_workspace/comment/vendor/slim/slim/Slim/Route.php(344): Slim\Handlers\Strategies\RequestResponse->__invoke(Array, Object(Slim\Http\Request), Object(Slim\Http\Response), A" while reading response header from upstream, client: 127.0.0.1, server: wwwfj.liejin99.com, request: "GET /comments/1 HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8080"
+2017/03/21 03:13:43 [error] 3337#0: *1 FastCGI sent in stderr: "PHP message: Slim Application Error:
+Type: PDOException
+Code: 2002
+Message: SQLSTATE[HY000] [2002] No such file or directory
+File: /home/fengjun/php_workspace/comment/lib/model/mysqlPdo.php
+Line: 12
+Trace: #0 /home/fengjun/php_workspace/comment/lib/model/mysqlPdo.php(12): PDO->__construct('mysql:dbname=si...', 'root', '123')
+#1 /home/fengjun/php_workspace/comment/lib/model/model.php(8): mysqlPdo::getInstance()
+#2 /home/fengjun/php_workspace/comment/app/controllers/CommentsController.php(20): model->__construct()
+#3 [internal function]: CommentsController->getAllComments(Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#4 /home/fengjun/php_workspace/comment/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(41): call_user_func(Array, Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#5 /home/fengjun/php_workspace/comment/vendor/slim/slim/Slim/Route.php(344): Slim\Handlers\Strategies\RequestResponse->__invoke(Array, Object(Slim\Http\Request), Object(Slim\Http\Response), A" while reading response header from upstream, client: 127.0.0.1, server: wwwfj.liejin99.com, request: "GET /comments/1 HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8080"
